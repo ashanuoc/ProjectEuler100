@@ -1,9 +1,15 @@
-num = [2, 3, 5, 7,]
-prime_num = []
-number = 8
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143 ?
 
+number = 600851475143
 i = 2
 
-while number%2 == 0 :
-    number = number/2
-    max_prime = 2
+while i <= number :
+    while number%i == 0 :
+        number = number/i
+        max_prime = i
+        
+
+    i = i+1
+
+print(max_prime)
