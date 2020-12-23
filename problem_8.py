@@ -27,6 +27,6 @@ num = num.replace("\n", "")  # given number is a string and has white space
 numbers = []
 
 for digit in num:
-    numbers.append(int(num))
+    numbers.append(int(digit))
 
-print(len(numbers))
+print(numbers)
