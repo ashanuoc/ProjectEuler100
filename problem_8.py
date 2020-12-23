@@ -24,3 +24,9 @@ num = """73167176531330624919225119674426574742355349194934
 
 num = num.replace("\n", "")  # given number is a string and has white space
 
+numbers = []
+
+for digit in num:
+    numbers.append(int(num))
+
+print(len(numbers))
