@@ -22,11 +22,23 @@ num = """73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450"""
 
-num = num.replace("\n", "")  # given number is a string and has white space
+num = num.replace("\n", "")  # given number is a string and has white spaces
 
 numbers = []
 
 for digit in num:
     numbers.append(int(digit))
 
-print(numbers)
+maxSum = 0
+
+for i in range(0, 997):
+    result = 1
+    for j in range(0, 4):
+        result = result * numbers[i+j]
+
+    if maxSum < result:
+        maxSum = result
+
+print(maxSum)
+
+
