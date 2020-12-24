@@ -31,14 +31,33 @@ for digit in num:
 
 maxSum = 0
 
-for i in range(0, 997):
+# using traversal method
+k = []
+for i in range(0, 988):
     result = 1
-    for j in range(0, 4):
+    for j in range(0, 13):
         result = result * numbers[i+j]
-
+    k.append(result)
     if maxSum < result:
         maxSum = result
 
 print(maxSum)
 
+# using numpy.prod() method
+print('*********************')
+import numpy as np
+
+result = []
+adj = 13  # adjacent numbers
+
+for i in range(0, 988):
+    arr = np.array(numbers[0+i: adj+i])
+    result.append(np.prod(arr))
+    if result[i] < 0:
+        print(arr)
+        print(result[i])
+        break
+
+
+print(np.max(result))
 
