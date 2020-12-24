@@ -43,21 +43,5 @@ for i in range(0, 988):
 
 print(maxSum)
 
-# using numpy.prod() method
-print('*********************')
-import numpy as np
 
-result = []
-adj = 13  # adjacent numbers
-
-for i in range(0, 988):
-    arr = np.array(numbers[0+i: adj+i])
-    result.append(np.prod(arr))
-    if result[i] < 0:
-        print(arr)
-        print(result[i])
-        break
-
-
-print(np.max(result))
 
