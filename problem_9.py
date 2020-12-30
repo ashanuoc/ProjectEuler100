@@ -7,6 +7,18 @@
 
 import math
 
-maxInt = math.floor(math.sqrt(1000))  # Find the largest natural number that its square close to 1000
+a = 1
+b = 2
 
-print(maxInt)
+while True:
+    num = a + b + math.sqrt(a**2 + b**2)
+    if num < 1000:
+        b = b + 1
+    elif num == 1000:
+        print('a*b*c =', a * b * math.sqrt(a**2 + b**2))
+        print(b)
+        break
+    else:
+        a = a + 1  # a < b < c
+        b = a + 1
+
